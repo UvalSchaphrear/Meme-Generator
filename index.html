@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Meme Generator</title>
+  </head>
+  <body onload="onInit()">
+    <div class="header">
+      <header class="nav-bar main-layout space-between flex">
+        <div class="logo flex">
+          <img src="./img/LOGO.png" alt="" />
+        </div>
+        <nav class="main-nav space-between">
+          <ul class="clean-list flex">
+            <li><a class="flex" href="#" onclick="toggleGallery()">Gallery</a></li>
+            <!-- <li><a class="flex" href="#about">About</a></li> -->
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main class="main-layout">
+    <section class="gallery-container main-layout flex">Gallery</section>
+    <!-- <section class="about main-layout"></section> -->
+    <section class="main-continaer flex">
+      <canvas class="canvas-container" id="my-canvas" height="400" width="400">
+      </canvas>
+      <div class="editor">
+        <h3 class="editor-text">Editor</h3>
+        <div class="first-row">
+          <input
+            type="text"
+            value=""
+            class="text-picker input-text"
+            placeholder="Enter text here"
+            onkeyup="onTextChange(value)"
+          />
+        </div>
+        <div>
+          <input
+            type="color"
+            class="text-color-picker"
+            value="#ffffff"
+            oninput="onChageColor(value)"
+          />
+          <input
+            type="color"
+            class="stroke-color-picker"
+            value="#000000"
+            oninput="onChageStrokeColor(value)"
+          />
+          <img
+            class="switch-line-btn"
+            onclick="onSwitchLines()"
+            src="./img/editor/up-and-down-opposite-double-arrows-side-by-side.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <button class="plus-size-btn" onclick="onIncreaseText()">
+            <img
+              class="plus-size-btn"
+              onclick="onIncreaseText()"
+              src="./img/editor/increase-font-24.png"
+              alt=""
+            />
+          </button>
+          <button class="minus-size-btn" onclick="onDecreaseText()">
+            <img src="./img/editor/Editing-Decrease-Font-icon.png" alt="" />
+          </button>
+        </div>
+        <div>
+          <button class="align-left-size-btn" onclick="onAlignLeft()">
+            <img src="./img/editor/align-left.png" alt="" />
+          </button>
+          <button class="align-center-btn" onclick="onAlignCenter()">
+            <img src="./img/editor/align-center.png" alt="" />
+          </button>
+          <button class="align-right-btn" onclick="onAlignRight()">
+            <img src="./img/editor/align-right.png" alt="" />
+          </button>
+        </div>
+        <div class="flex">
+          <img
+            class="add-line-btn"
+            onclick="onAddLine()"
+            src="./img/editor/add.png"
+            alt=""
+          />
+          <img
+            class="delete-line-btn"
+            onclick="onDeleteLine()"
+            src="./img/editor/65.png"
+            alt=""
+          />
+          <select class="font-change-btn" onchange="onChangeFont(this.value)">
+            <option>Fonts</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Impact">Impact</option>
+          </select>
+          <button onclick="onMoveUp()">
+            <img class="editorimg" src="./img/editor/up-arrow.png" alt="" />
+          </button>
+          <button onclick="onMoveDown()">
+            <img class="editorimg" src="./img/editor/down.png" alt="" />
+          </button>
+          
+          <a href="#" onclick="downloadCanvas(this)" download=""><img class="download-btn"src="./img/editor/download.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <section id="about">I love to eat Kebab, but I'm a vegetarian, so FML...</section> -->
+    <footer class="main-footer">
+      <small class="rights">All pickles are preserved 2021</small>
+    </footer>
+    <script src="js/services/storageService.js"></script>
+    <script src="js/services/mainService.js"></script>
+    <script src="js/services/galleryService.js"></script>
+    <script src="js/galleryContorller.js"></script>
+    <script src="js/mainController.js"></script>
+  </body>
+</html>
