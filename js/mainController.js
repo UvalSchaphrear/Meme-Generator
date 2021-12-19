@@ -118,3 +118,7 @@ function onDownloadImage(img) {
   console.log(this);
   downloadCanvas(img);
 }
+
+function toggleMenu() {
+  document.body.classList.toggle('menu-open');
+}

@@ -16,19 +16,20 @@
         <nav class="main-nav space-between">
           <ul class="clean-list flex">
             <li><a class="flex" href="#" onclick="toggleGallery()">Gallery</a></li>
-            <!-- <li><a class="flex" href="#about">About</a></li> -->
+            <li><a class="flex" href="#about" onclick="toggleAbout()">About</a></li>
             </li>
           </ul>
         </nav>
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
       </header>
     </div>
-    <main class="main-layout">
-    <section class="gallery-container main-layout flex">Gallery</section>
+    <main class="main-layout flex">
+    <section class="gallery-container main-layout">Gallery</section>
     <!-- <section class="about main-layout"></section> -->
-    <section class="main-continaer flex">
+    <section class="main-container flex">
       <canvas class="canvas-container" id="my-canvas" height="400" width="400">
       </canvas>
-      <div class="editor">
+      <div class="editor flex">
         <h3 class="editor-text">Editor</h3>
         <div class="first-row">
           <input
@@ -113,8 +114,8 @@
         </div>
       </div>
     </section>
+    <section id="about" class="about"> <img class="my-pic" src="/img/mypic.jpg" alt=""> <p class="about-text flex"> My name is Yuval Shafrir, and I know the secret of how Coke Zero is REALLY made.</p></section>
   </main>
-  <!-- <section id="about">I love to eat Kebab, but I'm a vegetarian, so FML...</section> -->
     <footer class="main-footer">
       <small class="rights">All pickles are preserved 2021</small>
     </footer>
