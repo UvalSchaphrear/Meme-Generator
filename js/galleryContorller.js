@@ -21,12 +21,11 @@ function toggleGallery() {
   var elCanvas = document.querySelector('canvas');
   var elEditor = document.querySelector('.editor');
   var elAbout = document.querySelector('.about');
-  elAbout.style.display = 'none';
-  // console.log(gallery);
-  if (elGallery.style.display === 'none') {
+  if (elGallery.style.display !== 'block') {
     elGallery.style.display = 'grid';
     elEditor.style.display = 'none';
     elCanvas.style.display = 'none';
+    elAbout.style.display = 'none';
   }
   toggleMenu();
 }
@@ -36,27 +35,17 @@ function toggleAbout() {
   var elCanvas = document.querySelector('canvas');
   var elEditor = document.querySelector('.editor');
   var elAbout = document.querySelector('.about');
-  if (elAbout.style.display === 'none') {
+  if (elAbout.style.display !== 'block') {
+    console.log(elAbout.style.display);
     elAbout.style.display = 'block';
     elGallery.style.display = 'none';
     elEditor.style.display = 'none';
     elCanvas.style.display = 'none';
   } else {
-    elAbout.style.display = 'none';
     elGallery.style.display = 'grid';
+    elEditor.style.display = 'none';
+    elCanvas.style.display = 'none';
+    elAbout.style.display = 'none';
   }
   toggleMenu();
 }
-
-// function toggleMemes() {
-//   var elGallery = document.querySelector('.gallery-container');
-//   var elCanvas = document.querySelector('canvas');
-//   var elEditor = document.querySelector('.editor');
-//   if (elCanvas.style.visibility === 'hidden') {
-//     elGallery.style.visibility = 'hidden';
-//     elEditor.style.visibility = 'visible';
-//     elCanvas.style.visibility = 'visible';
-//   }
-// }
-
-// function toggleAbout() {}

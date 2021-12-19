@@ -158,15 +158,13 @@ canvas {
 }
 
 .about {
-  display: none;
   margin-top: 30px;
   /* position: absolute; */
   font-family: bubble;
   color: #2c282696;
-  flex-direction: row;
+  display: none;
   /* justify-content: flex-end; */
   /* align-items: flex-start; */
-  justify-content: space-between;
   /* margin-bottom: 50px; */
 }
 
